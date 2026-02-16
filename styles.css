@@ -14,8 +14,11 @@ header {
 
 body {
   font-family: "Sora", sans-serif;
-  background-color: #200326;
-  background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+  /* background-color: #200326;
+  background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png"); */
+  background-color: #15061f;
+  background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */ /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */ /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   color: #ffffff;
   overflow-x: hidden;
@@ -60,39 +63,33 @@ section {
 .me {
   display: flex;
   padding: 2rem;
-  min-height: 100vh;
+  min-height: 200px;
   justify-content: center;
 }
 
 .me-content {
-  width: 700px;
-  height: 500px;
-  background-color: #472050;
-  background-image: url("https://www.transparenttextures.com/patterns/diagonal-striped-brick.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */ /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */ /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */ /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  width: 900px;
+  min-height: 500px;
+  background-color: #280b3d;
+  background-image: url("https://www.transparenttextures.com/patterns/crissxcross.png");
   border-radius: 20px;
   padding: 3rem;
   border: 1px solid rgba(26, 169, 205, 0.05);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  margin-bottom: 4em;
 }
 
 .me-content:hover {
-  background-color: #7c2689;
-  background-image: url("https://www.transparenttextures.com/patterns/diagonal-striped-brick.png");
-  color: #08060b;
-  transform: translateY(-20px) rotate(10deg); /* Sobe e rotaciona */
+  transform: translateY(-20px); /* Sobe e rotaciona */
 
-  box-shadow: 0 10px 30px rgba(39, 7, 44, 0.4); /* Sombra brilhante */
+  box-shadow: 0 10px 30px rgba(0, 255, 245, 0.4); /* Sombra brilhante */
 }
 
 .name {
   text-align: center;
-}
-
-.info {
-  padding: 2em;
+  margin-bottom: 1em;
 }
 
 .info img {
@@ -101,38 +98,48 @@ section {
 
 .circle-img {
   border-radius: 50%;
-  border: 7px solid #23053c;
+  border: 7px solid #000000;
   width: 180px;
   height: 180px;
   float: left;
+  transition: transform 3s ease;
+}
+
+.circle-img:hover {
+  box-shadow: 0 10px 30px rgba(0, 255, 245, 0.4); /* Sombra brilhante */
+  transform: rotateY(360deg);
 }
 
 .infoP {
-  font-family: "Caveat", cursive;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-size: 30px;
   font-style: normal;
   margin: 0px 10px 0 0;
+  text-align: justify;
 }
 
-/* Seção Habilidades */
-#habilidades {
-  padding: 1rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+.divHab {
+  background-color: #280b3d;
+  background-image: url("https://www.transparenttextures.com/patterns/crissxcross.png");
+  padding: 10px 3em;
+  border-radius: 20px;
+  max-height: 40%;
+  transition: all 0.3s ease;
 }
 
-/* Cabeçalho da Seção */
-.section-header {
-  margin-bottom: 1rem;
-  text-align: center;
+.divHab:hover {
+  transform: translateY(-20px); /* Sobe e rotaciona */
+  box-shadow: 0 10px 30px rgba(0, 255, 245, 0.4); /* Sombra brilhante */
 }
 
 .section-title {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
   margin-bottom: 7rem;
+  margin-top: 2rem;
+  text-align: center;
 }
 
 /* Grid de Skills */
@@ -145,7 +152,8 @@ section {
 
 /* Cards de Skill */
 .skill-card {
-  background: #23053c;
+  background-color: #15061f;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
   border-radius: 20px;
   padding: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -215,4 +223,119 @@ section {
   .skills-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.projetos {
+  background-color: #280b3d;
+  background-image: url("https://www.transparenttextures.com/patterns/crissxcross.png");
+  padding: 10px 3em;
+  border-radius: 20px;
+  max-height: 40%;
+  transition: all 0.3s ease;
+}
+
+.projetos:hover {
+  transform: translateY(-20px); /* Sobe e rotaciona */
+  box-shadow: 0 10px 30px rgba(0, 255, 245, 0.4); /* Sombra brilhante */
+}
+
+.projetos-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.projetos-card {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  background-color: #15061f;
+  background-image: url("https://www.transparenttextures.com/patterns/tree-bark.png");
+  margin: 5em 2em;
+}
+
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2em;
+}
+
+.project-card {
+  background: var(--bg-card);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 0, 110, 0.4);
+  box-shadow: 0 20px 60px rgba(255, 0, 110, 0.2);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  background: var(--gradient-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  opacity: 0.8;
+}
+
+.project-content {
+  padding: 2rem;
+}
+
+.project-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #00fff5;
+}
+
+.project-card p {
+  color: #00fff5;
+  margin-bottom: 1.5rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #00fff5;
+  color: #00fff5;
+}
+
+footer {
+  padding: 2rem;
+  color: #a8b2d1;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  width: 100wh;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
