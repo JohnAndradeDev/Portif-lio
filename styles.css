@@ -1,341 +1,202 @@
 * {
-  padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  padding: 0;
+  box-sizing: border-box; /* O tamanho sera definido pelo height e width, o padding e border não vão aumentar o tamanho da caixa; */
 }
 
-header {
-  width: 100wh;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Variaveis das cores do meu projeto */
+:root {
+  --Roxo-fundo: #15061f;
+  --Branco-letra: #ffffff;
+  --Ciano-letra: #00fff5;
+  --Ciano-sombra: rgba(0, 255, 245, 0.4);
+  --Roxo-div: #280b3d;
 }
 
 body {
-  font-family: "Sora", sans-serif;
-  /* background-color: #200326;
-  background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png"); */
-  background-color: #15061f;
+  background-color: var(--Roxo-fundo);
   background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */ /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */ /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-  color: #ffffff;
-  overflow-x: hidden;
-  line-height: 1.6;
+  color: var(--Branco-letra);
+  overflow-x: hidden; /* Caso o conteudo de uma div estore para fora, ele será escondido. */
 }
 
-.contact-links {
+/*                                         CSS DO HEADER                                                                */
+.containerHeader {
   display: flex;
-  gap: 1.5rem; /* Espaço entre os ícones */
-  justify-content: center; /* Centraliza horizontalmente */
-  flex-wrap: wrap; /* Quebra linha se não couber */
-  margin-top: 1rem; /* Espaço acima */
+  height: 100px;
+  align-items: center;
+  justify-content: center;
 }
 
-.contact-link {
-  width: 60px;
-  height: 60px;
+.containerContacts {
   display: flex;
-  align-items: center; /* Centraliza ícone verticalmente */
-  justify-content: center; /* Centraliza ícone horizontalmente */
-  background: #1e1437; /* Fundo escuro */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
-  border-radius: 50%; /* Deixa circular */
-  color: #ffffff;
+  gap: 1.5em;
+  width: 300px;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+.contactLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  padding: 1em;
+  background-color: var(--Roxo-fundo);
+  color: var(--Branco-letra);
   text-decoration: none;
-  transition: all 0.3s ease; /* Suaviza animações */
 }
 
-.contact-link:hover {
-  background: #00fff5; /* Muda para cor cyan */
-  color: #141937; /* Texto fica escuro */
-  transform: translateY(-5px) rotate(10deg); /* Sobe e rotaciona */
-  box-shadow: 0 10px 30px rgba(0, 255, 245, 0.4); /* Sombra brilhante */
+.contactLink:hover {
+  background-color: var(--Ciano-letra);
+  box-shadow: 0px 15px 20px var(--Ciano-sombra);
+  color: var(--Roxo-fundo);
 }
 
 section {
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin: 4em 2em;
 }
 
-.me {
+/*                                        CSS DA SECTION WHOIAM                                                         */
+.containerWhoIam {
   display: flex;
-  padding: 2rem;
-  min-height: 200px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentWhoIam {
+  background-color: var(--Roxo-div);
+  background-image: url("https://www.transparenttextures.com/patterns/crissxcross.png");
+  border-radius: 20px;
+  max-width: 1000px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.contentWhoIam:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 30px rgba(0, 255, 245, 0.4);
+}
+
+.nameWhoIam,
+.nameHab {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 0.5em;
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 5px 5px 25px black;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.circleImg {
+  width: 15em;
+  height: 15em;
+  border: 4px solid var(--Roxo-fundo);
+  border-radius: 50%;
+  transition: transform 4s ease;
+}
+
+/* .circleImg:hover {
+  transform: rotateY(360deg);
+} */
+
+.infoP {
+  text-align: justify;
+  font-size: 1.5rem;
+  margin: 0px 1em 1em 1em;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: rgb(163, 157, 157);
+}
+
+/*                                        CSS PARA A SECTION HABILIDADE                                                 */
+.containerHab {
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
-.me-content {
-  width: 900px;
-  min-height: 500px;
-  background-color: #280b3d;
+.contentHab {
+  background-color: var(--Roxo-div);
   background-image: url("https://www.transparenttextures.com/patterns/crissxcross.png");
   border-radius: 20px;
-  padding: 3rem;
-  border: 1px solid rgba(26, 169, 205, 0.05);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 4em;
+  max-width: 1000px;
+  align-items: center;
+  justify-content: center;
 }
 
-.me-content:hover {
-  transform: translateY(-20px); /* Sobe e rotaciona */
-
-  box-shadow: 0 10px 30px rgba(0, 255, 245, 0.4); /* Sombra brilhante */
-}
-
-.name {
-  text-align: center;
-  margin-bottom: 1em;
-}
-
-.info img {
-  margin: 0px 50px 0 0;
-}
-
-.circle-img {
-  border-radius: 50%;
-  border: 7px solid #000000;
-  width: 180px;
-  height: 180px;
-  float: left;
-  transition: transform 3s ease;
-}
-
-.circle-img:hover {
-  box-shadow: 0 10px 30px rgba(0, 255, 245, 0.4); /* Sombra brilhante */
-  transform: rotateY(360deg);
-}
-
-.infoP {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-size: 30px;
-  font-style: normal;
-  margin: 0px 10px 0 0;
-  text-align: justify;
-}
-
-.divHab {
-  background-color: #280b3d;
-  background-image: url("https://www.transparenttextures.com/patterns/crissxcross.png");
-  padding: 10px 3em;
-  border-radius: 20px;
-  max-height: 40%;
-  transition: all 0.3s ease;
-}
-
-.divHab:hover {
-  transform: translateY(-20px); /* Sobe e rotaciona */
-  box-shadow: 0 10px 30px rgba(0, 255, 245, 0.4); /* Sombra brilhante */
-}
-
-.section-title {
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 800;
-  margin-bottom: 7rem;
-  margin-top: 2rem;
-  text-align: center;
-}
-
-/* Grid de Skills */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 10em;
-}
-
-/* Cards de Skill */
-.skill-card {
-  background-color: #15061f;
-  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
-  border-radius: 20px;
-  padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Efeito Hover no Card */
-.skill-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(0, 255, 245, 0.3);
-}
-
-.skill-card:hover::before {
-  transform: scaleX(1);
-}
-
-/* Título da Categoria */
-.skill-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-  color: #00fff5;
-}
-
-/* Container das Tags */
-.skill-tags {
+.conteinerSkills {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  margin: 2em 0px;
   flex-wrap: wrap;
-  gap: 0.5rem;
 }
 
-/* Tags Individuais */
+.skillCard {
+  display: flex;
+  align-items: center;
+  background-color: var(--Roxo-fundo);
+  background-image: url("https://www.transparenttextures.com/patterns/subtle-zebra-3d.png");
+  flex-direction: column;
+  border-radius: 20px;
+  width: 300px;
+  height: 200px;
+  margin: 1em;
+  box-shadow: 5px 5px 10px black;
+}
+
+.skillCard > h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 1em 0px;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 10;
+  font-style: normal;
+  text-shadow: 5px 5px 25px black;
+}
+
+.skillTags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin: 1em;
+  flex-wrap: wrap;
+}
+
 .tag {
-  padding: 0.4rem 0.8rem;
-  background: rgba(0, 255, 245, 0.1);
-  border: 1px solid rgba(0, 255, 245, 0.3);
-  border-radius: 8px;
-  font-size: 0.875rem;
-  font-family: "JetBrains Mono", monospace;
-  color: #00fff5;
+  border: 1px solid black;
+  padding: 4px;
+  border-radius: 10px;
+  background-color: var(--Roxo-fundo);
+  font-size: 1.3em;
+  color: var(--Ciano-letra);
 }
 
 .tag:hover {
-  transform: translateY(-5px);
-  border-color: rgba(0, 255, 245, 0.3);
+  box-shadow: 4px 4px 10px var(--Ciano-sombra);
+  cursor: default;
 }
 
-/* Responsivo para tablets */
-@media (max-width: 768px) {
-  #habilidades {
-    padding: 4rem 1.5rem;
-  }
+/*                                        CSS DOS PROJETOS                                                              */
 
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-  }
-
-  .skill-card {
-    padding: 1.5rem;
-  }
-}
-
-/* Responsivo para mobile */
-@media (max-width: 480px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.projetos {
-  background-color: #280b3d;
-  background-image: url("https://www.transparenttextures.com/patterns/crissxcross.png");
-  padding: 10px 3em;
-  border-radius: 20px;
-  max-height: 40%;
-  transition: all 0.3s ease;
-}
-
-.projetos:hover {
-  transform: translateY(-20px); /* Sobe e rotaciona */
-  box-shadow: 0 10px 30px rgba(0, 255, 245, 0.4); /* Sombra brilhante */
-}
-
-.projetos-title {
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 800;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.projetos-card {
-  display: inline-block;
-  width: 300px;
-  height: 300px;
-  background-color: #15061f;
-  background-image: url("https://www.transparenttextures.com/patterns/tree-bark.png");
-  margin: 5em 2em;
-}
-
-.projetos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2em;
-}
-
-.project-card {
-  background: var(--bg-card);
-  border-radius: 20px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(255, 0, 110, 0.4);
-  box-shadow: 0 20px 60px rgba(255, 0, 110, 0.2);
-}
-
-.project-image {
-  width: 100%;
-  height: 200px;
-  background: var(--gradient-2);
+.containerProj {
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-size: 3rem;
-  opacity: 0.8;
-}
-
-.project-content {
-  padding: 2rem;
-}
-
-.project-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-  color: #00fff5;
-}
-
-.project-card p {
-  color: #00fff5;
-  margin-bottom: 1.5rem;
-}
-
-.project-links {
-  display: flex;
-  gap: 1rem;
-}
-
-.project-link {
-  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  color: var(--text-primary);
-  text-decoration: none;
-  font-size: 0.875rem;
-  transition: all 0.3s ease;
-}
-
-.project-link:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: #00fff5;
-  color: #00fff5;
-}
-
-footer {
-  padding: 2rem;
-  color: #a8b2d1;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  width: 100wh;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
