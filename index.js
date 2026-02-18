@@ -19,21 +19,28 @@ const projetos = [
   {
     title: "Projeto 1",
     description: "Descrição",
-    icon: "Imagem",
+    icon: "https://picsum.photos/200",
     github: "#",
     demo: "#",
   },
   {
     title: "Projeto 2",
     description: "Descrição",
-    icon: "Imagem",
+    icon: "https://picsum.photos/200",
     github: "#",
     demo: "#",
   },
   {
     title: "Projeto 3",
     description: "Descrição",
-    icon: "Imagem",
+    icon: "https://picsum.photos/200",
+    github: "#",
+    demo: "#",
+  },
+  {
+    title: "Projeto 4",
+    description: "Descrição",
+    icon: "https://picsum.photos/200",
     github: "#",
     demo: "#",
   },
@@ -151,17 +158,21 @@ function Habilidades() {
 function Projetos() {
   return (
     <section>
-      <div className="conteinerProj">
+      <div className="containerProj">
         <div className="contentProj">
-          <h2 className="projetos-title">Projetos Pessoais (em construção)</h2>
-          <div className="projetos-grid">
+          <h2 className="nameProj">Projetos Pessoais (em construção)</h2>
+          <div className="containerCards">
             {projetos.map((project, index) => (
-              <div key={index} className="project-card">
-                <div className="project-image">{project.icon}</div>
-                <div className="project-content">
+              <div key={index} className="projectCard">
+                <img
+                  className="projectImg"
+                  src={project.icon}
+                  alt="avatar_img"
+                />
+                <div className="projectContent">
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
-                  <div className="project-links">
+                  <div className="projectLinks">
                     <a
                       href={project.github}
                       className="project-link"
