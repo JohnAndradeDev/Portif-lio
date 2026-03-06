@@ -17,32 +17,12 @@ const skills = [
 
 const projetos = [
   {
-    title: "Projeto 1",
-    description: "Descrição",
-    icon: "https://picsum.photos/200",
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Projeto 2",
-    description: "Descrição",
-    icon: "https://picsum.photos/200",
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Projeto 3",
-    description: "Descrição",
-    icon: "https://picsum.photos/200",
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Projeto 4",
-    description: "Descrição",
-    icon: "https://picsum.photos/200",
-    github: "#",
-    demo: "#",
+    title: "Book Notes",
+    description:
+      "Um pequeno blog pessoal, em que cada pessoa pode fazer o login e adicionar resenhas dos livros lidos, e as resenhas são pessoais, assim você só pode ler as suas próprias resenhas.",
+    icon: "bookNotes.png",
+    github: "https://github.com/JohnAndradeDev/Book-Notes-Project.git",
+    demo: "https://book-notes-project-s8sx.onrender.com/",
   },
 ];
 
@@ -93,7 +73,7 @@ function Header() {
             <i data-lucide="linkedin"></i>
           </a>
           <a
-            href="Curriculo_John_2026.pdf"
+            href="Curriculo_Johnatan_2026.pdf"
             className="contactLink"
             target="_blank"
             rel="noopener noreferrer"
@@ -160,7 +140,7 @@ function Projetos() {
     <section>
       <div className="containerProj">
         <div className="contentProj">
-          <h2 className="nameProj">Projetos Pessoais (em construção)</h2>
+          <h2 className="nameProj">Projetos Pessoais</h2>
           <div className="containerCards">
             {projetos.map((project, index) => (
               <div key={index} className="projectCard">
@@ -171,7 +151,13 @@ function Projetos() {
                 />
                 <div className="projectContent">
                   <h3>{project.title}</h3>
-                  <p>{project.description}</p>
+                  <p>
+                    {project.description}{" "}
+                    <span style={{ color: "#00fff5" }}>
+                      ("Demo" Aguardar cerca de 1 minuto para o servidor
+                      inicializar)
+                    </span>{" "}
+                  </p>
                   <div className="projectLinks">
                     <a
                       href={project.github}
