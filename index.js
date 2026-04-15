@@ -61,7 +61,7 @@ function Header() {
             rel="noopener noreferrer"
             title="GitHub"
           >
-            <i data-lucide="github"></i>
+            <i data-lucide="cat"></i>
           </a>
           <a
             href="https://www.linkedin.com/in/johnatan-andrade-b04339268/"
@@ -70,7 +70,7 @@ function Header() {
             rel="noopener noreferrer"
             title="LinkedIn"
           >
-            <i data-lucide="linkedin"></i>
+            <i data-lucide="briefcase-business"></i>
           </a>
           <a
             href="Curriculo_Johnatan_2026.pdf"
