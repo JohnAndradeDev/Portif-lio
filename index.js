@@ -22,7 +22,7 @@ const projetos = [
       "Um pequeno blog pessoal, em que cada pessoa pode fazer o login e adicionar resenhas dos livros lidos, e as resenhas são pessoais, assim você só pode ler as suas próprias resenhas.",
     icon: "bookNotes.png",
     github: "https://github.com/JohnAndradeDev/Book-Notes-Project.git",
-    demo: "https://book-notes-project-s8sx.onrender.com/",
+    demo: "https://book-notes-project-s8sx.onrender.com",
   },
 ];
 
